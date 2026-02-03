@@ -33,6 +33,7 @@ public class Program1_Collection {
 	public static void main(String[] args) {
 		
 		List_ list=new List_();
+		ITest obj=new ITest();
 	}
 
 }

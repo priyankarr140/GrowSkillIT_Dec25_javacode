@@ -1,4 +1,7 @@
 package day8;
+
+import day9.part2.ITest;
+
 class User
 {
 	int userId;
@@ -22,6 +25,7 @@ public class Program1_Inheritance {
 		TestAccess obj=new TestAccess();
 		obj.getPrivateNum();
 		obj.defaultNum=10;
+		ITest.num;
 
 	}
 
