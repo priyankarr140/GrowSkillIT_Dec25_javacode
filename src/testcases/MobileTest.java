@@ -48,7 +48,7 @@ public class MobileTest {
 	}
 	
 
-	@Test
+	@Test(groups="smoke")
 	void mobileLogin()
 	{
 		System.out.println("MOBILE LOGIN SUCCESSFUL");	

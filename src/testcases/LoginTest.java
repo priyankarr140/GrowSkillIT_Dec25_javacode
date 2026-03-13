@@ -9,7 +9,7 @@ import org.testng.asserts.SoftAssert;
 public class LoginTest {
 	
 	
-	@Test
+	@Test(groups="smoke")
 	void login()
 	{
 		//try {
@@ -21,7 +21,7 @@ public class LoginTest {
 		}
 	}
 	
-	@Test
+	@Test(retryAnalyzer=Rerun.class)
 	void logout()
 	{
 		boolean input=false;
@@ -30,8 +30,14 @@ public class LoginTest {
 		soft.assertTrue(input);
 		//Assert.assertTrue(input);
 		//Assert.assertEquals("hello", str);
-		System.out.println("LOGOUT SUCCESSFUL");
+		System.out.println("LOGOUT FAILED");
 		soft.assertAll();
+	}
+	
+	@Test
+	void methodC()
+	{
+		System.out.println("METHOD C");
 	}
 	
 

@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class ParallelTest {
 
-@Test
+	@Test
 	void methodA() throws Exception
 	{
 		ChromeDriver driver=new ChromeDriver();
@@ -18,7 +18,7 @@ public class ParallelTest {
 		Thread.sleep(2000);
 		driver.quit();
 	}
-@Test
+	@Test
 void methodB() throws Exception
 {
 	ChromeDriver driver=new ChromeDriver();

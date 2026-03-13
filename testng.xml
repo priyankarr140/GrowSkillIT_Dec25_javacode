@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="2" name="Test" parallel="methods">
+<listeners>
+<listener class-name="testcases.ListenerA"></listener>
+</listeners>
+<parameter name="username" value="gsiuser"></parameter>
+<parameter name="pass" value="gsipass"></parameter>
+<groups>
+<run>
+<include name="smoke"></include>
+</run>
+</groups>
+  <test  name="Test" >
     <classes>
-     <!-- <class name="testcases.LoginTest"/>
-      <class name="testcases.MobileTest"/>-->
-       <class name="testcases.ParallelTest"/>
+   <!-- ctrl+shift+/-->
+    <!--  <class name="testcases.LoginTest"/>-->
+      <class name="testcases.MobileTest"/>
+       <class name="testcases.LoginTest">
+     <!--  <methods>
+       
+       <exclude name="login"></exclude>
+       <include name="logout"></include>
+
+       </methods>-->
+       </class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
